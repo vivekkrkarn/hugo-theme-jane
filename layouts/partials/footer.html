@@ -1,15 +1,16 @@
 <div class="icon-links">
+  <p>आप हमसे सोशल मीडिया के द्वारा जुड़े रह सकते हैं ।</p>
+  &nbsp;&nbsp;
   {{ partial "social_links.html" . }} 
 </div>
 
 <div class="copyright">
+  <!--
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    Developed by <a class="hexo-link" href="https://vivekkarn.com">Vivek Karn</a>
   </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
-  </span>
+-->
+  
 
   <span class="copyright-year">
     {{- $current := now.Format "2006" }}
@@ -31,6 +32,11 @@
         {{ end }}
       </span>
     {{- end -}}
+
+    &nbsp;<span class="power-by">
+    <i class="fas fa-code"></i> by <a class="hexo-link" href="https://vivekkarn.com">Vivek Karn</a>
+    </span>
+
   </span>
 
   <!-- Counter busuanzi -->

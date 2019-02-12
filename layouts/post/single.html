@@ -49,11 +49,17 @@
       {{ .Content }}
     </div>
 
+
+
+    <!-- Share -->
+    {{ partial "post/share.html" . }}
+
+
     <!-- Copyright -->
-    {{ partial "post/copyright.html" . }}
+    <!-- {{ partial "post/copyright.html" . }} -->
 
     <!-- Reward -->
-    {{ partial "post/reward.html" . }}
+    <!--- {{ partial "post/reward.html" . }} -->
 
     <footer class="post-footer">
       {{ with .Params.tags -}}

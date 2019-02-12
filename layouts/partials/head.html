@@ -80,6 +80,11 @@
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen" crossorigin="anonymous">
 <!-- End -->
 
+<!-- loading noto sans google fonts start  -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans&amp;subset=devanagari" rel="stylesheet">
+<!-- loading noto sans google fonts ends-->
+
+
 <!-- custom css -->
 {{ range .Site.Params.customCSS }}
 <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">

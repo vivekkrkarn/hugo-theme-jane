@@ -1,0 +1,17 @@
+<!-- share btns start -->
+
+{{ $title := .Title }}
+{{ $url := printf "%s" .URL | absLangURL }}
+{{ $body := print $title ", by " .Site.Title "\n" .Params.description "\n\n"  }}
+
+
+
+<div class="share-btn" data-url={{$url}} data-title={{$title}} data-desc={{$body}}>
+  <p>यह आलेख पसंद आया तो औरों से साझा करें .. ज्ञान के प्रवाह में योगदान करें..</p>
+    <a class="btn-facebook" data-id="fb"> <i class="fab fa-facebook-square"></i> Facebook</a>
+    <a class="btn-twitter" data-id="tw"> <i class="fab fa-twitter"></i> Twitter</a>
+    <a class="btn-wa" data-id="wa"> <i class="fab fa-whatsapp"></i> Whatsapp</a>
+    <a class="btn-mail" data-id="mail"> <i class="fas fa-at"></i> EMail</a>
+    <a class="btn-print" data-id="print"> <i class="fas fa-print"></i> Print</a>
+</div>
+<!-- share btns ends -->

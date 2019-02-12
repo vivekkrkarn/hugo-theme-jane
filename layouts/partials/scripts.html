@@ -10,6 +10,14 @@
   <script type="text/javascript" src="{{ "lib/slideout/slideout-1.0.1.min.js" | relURL }}"></script>
 {{- end }}
 
+<!-- loading share js start -->
+<script type="text/javascript" src="{{ "lib/share-buttons/share-buttons.js" | relURL }}"></script>
+<!-- loading share js ends -->
+
+<!-- loading fontawesome start -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<!-- loading fontawesome end -->
+
 <!-- Jane theme main js -->
 {{ $jsTemplate := resources.Get "js/main.js" }}
 {{ $secureJS := $jsTemplate | resources.ExecuteAsTemplate "js/main.js" . | fingerprint }}

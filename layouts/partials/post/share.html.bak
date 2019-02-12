@@ -1,0 +1,30 @@
+<!-- share btns start -->
+
+{{ $title := .Title }}
+{{ $url := printf "%s" .URL | absLangURL }}
+{{ $body := print $title ", by " .Site.Title "\n" .Params.description "\n\n" $url "\n" }}
+
+<div id="sharing">
+
+  <p>यह आलेख पसंद आया तो औरों से साझा करें .. ज्ञान के प्रवाह में योगदान करें..</p>
+
+  <a class="hvr-wobble-vertical" href="http://www.facebook.com/sharer.php?u={{ $url }}" class="facebook" aria-label="share on Facebook">
+    <img src="/images/icons/facebook-icon.png" alt="Share On Facebook"/>
+  </a>
+
+
+  <a class="hvr-wobble-vertical" href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Social.twitter }}{{ . }}{{ end }}" class="twitter" aria-label="share on Twitter">
+    <img src="/images/icons/twitter-icon.png" alt="Share On Twitter"/>
+  </a>
+
+  <a class="hvr-wobble-vertical" href="https://wa.me/?url={{ $url }}&text={{ $title }}">
+    <img src="/images/icons/whatsapp-icon.png" alt="Share On Whatsapp"/>
+  </a>
+
+  <a class="hvr-wobble-vertical" href="mailto:?subject=Check%20out%20{{ $title }}.&body={{ $body }}" class="twitter" aria-label="share on Email">
+    <img src="/images/icons/mail-icon.png" alt="Share On Email"/>
+  </a>
+
+</div>
+
+<!-- share btns ends -->
