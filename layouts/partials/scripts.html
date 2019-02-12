@@ -14,7 +14,24 @@
 <script type="text/javascript" src="{{ "lib/share-buttons/share-buttons.js" | relURL }}"></script>
 <!-- loading share js ends -->
 
+<!-- adding netifly identity widget start -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<!-- adding netifly identity widget end -->
+
+
+<!-- adding netifly identity script snippet inection start -->
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<!-- adding netifly identity script snippet inection start -->
 
 <!-- loading fontawesome start -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
